@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dokdo.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+
+    <header>
+        <div class="topmenu">
+            <img src="images/logo_tx.svg" alt="원형로고">
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#">체험관 소개</a>
+                        <ul class="sub">
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">체험관 연혁</a></li>
+                            <li><a href="#">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">관람정보</a>
+                        <ul class="sub">
+                            <li><a href="#">관람안내</a></li>
+                            <li><a href="#">단체예약</a></li>
+                            <li><a href="#">예약확인·취소</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">전시안내</a></li>
+                    <li><a href="#">독도 자료실</a>
+                        <ul class="sub">
+                            <li><a href="#">독도현황</a></li>
+                            <li><a href="#">독도사진</a></li>
+                            <li><a href="#">교육자료실</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">열린광장</a>
+                        <ul class="sub">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">포토앨범</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="log">
+                <a href="#">로그인</a>
+                <span class="dot">·</span>
+                <a href="#">회원가입</a>
+            </div>
+        </div>
+    </header>
+    <section class="hero">
+        <!-- 메인배너 -->
+        <div class="mainbanner" id="mainBanner">
+            <img class="main_im" src="images/visual_tx.svg" alt="독도">
+
+            <p class="main_on" id="bannerText">
+                독도에 대한 의미를 되새기는 특별한 공간,<br>
+                독도의 삶과 역사를 잊지 않기 위해 독도체험관이 앞장서겠습니다.
+            </p>
+
+            <a class="main-btn" href="#">
+                전시안내 보기 <span aria-hidden="true">↗</span>
+            </a>
+            <button type="button" class="prev" id="prevBtn">‹</button>
+            <button type="button" class="next" id="nextBtn">›</button>
+            <div class="scroll">
+                <a href="#next">SCROLL</a>
+            </div>
+            <div class="clc">
+                <a href="#"><img src="images/icon_apply.svg" alt="단체예약신청 아이콘"></a>
+                <p>단체예약<br>신청</p>
+            </div>
+        </div>
+        
+        <!-- 독도 바로알기/관람안내 -->
+        <section class="dokdo-info" id="next">
+            <div class="dokdo-inner">
+                <div class="info-content">
+                    <h2 class="content-title">독도 바로알기</h2>
+                    <p class="content-desc">
+                        독도의 역사를 배우고, 자연을 체험하며 독도영토주권<br>
+                        수호 의지를 다질 수 있는 소중한 시간이 되기를 바랍니다.
+                    </p>
+                    <a href="#" class="content-btn">
+                        바로가기 <span class="btn-icon">↗</span>
+                    </a>
+                </div>
+                <div class="info-panel">
+                    <h2 class="panel-title">관람안내</h2>
+                    <div class="panel-contact">
+                        <div class="panel-icon">
+                            <img src="images/icon_speaker.svg" alt="스피커아이콘">
+                        </div>
+                        <strong class="panel-phone">044-999-6393</strong>
+                        <button class="panel-btn">관람 문의하기</button>
+                    </div>
+                    <ul class="panel-list">
+                        <li class="panel-item">
+                            <span class="panel-label">관람시간</span>
+                            <p class="panel-text">
+                                화요일-토요일 9:00 ~ 17:00<br>
+                                (점심시간 12:00~13:00, 입장마감 16:30)<br>
+                                <span class="panel-note">※ 관람시간은 학교 사정에 따라 변경될 수 있습니다.</span>
+                            </p>
+                        </li>
+                        <li class="panel-item">
+                            <span class="panel-label">휴관안내</span>
+                            <p class="panel-text">
+                                일요일, 월요일 및 공휴일
+                            </p>
+                        </li>
+                        <li class="panel-item">
+                            <span class="panel-label">위치</span>
+                            <p class="panel-text">
+                                세종특별자치시 새롬서로 68 새롬고등학교 1층
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- 공지사항 -->
+        <section class="notice">
+            <div class="notice-inner">
+                <div class="notice-intro">
+                    <h2 class="notice-title">공지사항</h2>
+                    <p class="notice-desc">
+                        독도의 미래를 생각하는 공간으로<br>
+                        앞으로도 지속적으로 활용되기를 바랍니다.
+                    </p>
+                    <div class="notice-controls">
+                        <button type="button" class="notice-prev" aria-label="이전">‹</button>
+                        <button type="button" class="notice-next" aria-label="다음">›</button>
+                        <button type="button" class="notice-pause" aria-label="일시정지">Ⅱ</button>
+                    </div>
+                </div>
+                <div class="notice-rail">
+                    <div class="notice-track">
+                        <!-- 카드0 -->
+                        <article class="notice-card">
+                            <a href="#">
+                                <figure class="notice-thumb">
+                                    <img src="images/img_card1.svg" alt="카드0">
+                                </figure>
+                                <span class="notice-badge">NEWS</span>
+                            <h3 class="card-text">
+                                독도체험관 임시 휴관일(1/7~1/9)안내
+                            </h3>
+                            <p class="card-summary">
+                                2026년 1월 독도체험관 임시휴관일 안내<br>
+                                드립니다.&nbsp; 임시휴관일:.....<br>
+                            </p>
+                            </a>
+                        </article>
+                        <!-- 카드1 -->
+                        <article class="notice-card">
+                            <a href="#">
+                                <figure class="notice-thumb">
+                                    <img src="images/poster1.jpg" alt="카드1 포스터">
+                                </figure>
+                                <span class="notice-badge">NEWS</span>
+                            <h3 class="card-text">
+                                2025년 독도의 날 기념 독도체험관 ...
+                            </h3>
+                            <p class="card-summary">
+                                2025년 독도의 날 기념 독도 체험관 방문<br>
+                                이벤트-독도 강치 가방걸이 인형 증정<br>
+                                (선착.....
+                            </p>
+                            </a>
+                        </article>
+                        <!-- 카드2 -->
+                        <article class="notice-card">
+                            <a href="#">
+                                <figure class="notice-thumb">
+                                    <img src="images/poster2.jpg" alt="카드2 포스터">
+                                </figure>
+                                <span class="notice-badge">NEWS</span>
+                            <h3 class="card-text">
+                                2025년 새롬고와 독도 체험관이 함께...
+                            </h3>
+                            <p class="card-summary">
+                                우리땅, 독도를 담다 2025년 새롬고와<br>
+                                독도 체험관이 함께하는 독도 특별전.....<br>
+                            </p>
+                            </a>
+                        </article>
+                        <!-- 카드3 -->
+                        <article class="notice-card">
+                            <a href="#">
+                                <figure class="notice-thumb">
+                                    <img src="images/poster3.jpg" alt="카드3 포스터">
+                                </figure>
+                                <span class="notice-badge">NEWS</span>
+                            <h3 class="card-text">
+                                2025학년도 하반기 독도체험교실 안내
+                            </h3>
+                            <p class="card-summary">
+                                2025학년도 하반기 독도체험교실 &it; <br>
+                                행사안내 &gt; 기간.....:<br>
+                            </p>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 체험존 안내 -->
+        <section class="dokdo-hero">
+            <div class="experience-guide">
+                <div class="experience-inner">
+                    <article class="guide-card">
+                        <div class="guide-icon">
+                            <img src="images/icon_experience1.svg" alt="체험존아이콘">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">체험존 안내</h3>
+                            <p class="card-desc">
+                                독도체험관은 대한민국 동쪽 끝,<br>
+                                우리의 섬 독도를 만나는 체험 공간입니다.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="guide-card">
+                        <div class="guide-icon">
+                            <img src="images/icon_theater2.svg" alt="영상관아이콘">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">영상관 안내</h3>
+                            <p class="card-desc">
+                                가상현실(VR)과 같은 최신 기법을 활용하여<br>
+                                실감형 콘텐츠 등을 적용한 독도 영상관입니다.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <!-- 독도 배경 -->
+            <div class="dokdo-bg" aria-hidden="true"></div>
+            <div class="dokdo-content">
+                <img src="images/img_card1.svg" alt="독도마크">
+                <p class="dokdo-address">
+                    <span class="type-wrap"></span><span class="type-caret">|</span>
+                </p>
+            </div>
+            <div class="dokdo-points">
+                <div class="point-seodo">
+                    <span class="point-dot"></span>
+                    <span class="point-label">서도</span>
+                </div>
+                <div class="point-dongdo">
+                    <span class="point-dot"></span>
+                    <span class="point-label">동도</span>
+                </div>
+            </div>
+        </section>
+        <!-- 푸터 -->
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-info">
+                    <ul class="footer-links">
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">이메일주소무단수집거부</a></li>
+                    </ul>
+                    <p class="footer-address">
+                        주소. (30126) 세종특별자치시 새롬서로 68 새롬고등학교 1층 독도체험관
+                    </p>
+                    <p class="footer-tel">
+                        문의전화. <a href="tel:0449996393">044-999-6393</a>
+                    </p>
+                    <p class="footer-copy">
+                        © 2022 Dokdo Exhibitonon All rights reserved .
+                    </p>
+                </div>
+                <div class="footer-side">
+                    <div class="footer-wa">
+                        <img src="images/wa_mark2025.svg" alt="웹접근성 마크">
+                    </div>
+                    <div class="footer-clc">
+                        <a href="#" class="footer-cta">
+                            <img src="images/icon_map.svg" alt="오시는길아이콘">
+                            <span class="footer-text">
+                                독도체험관<br>오시는길
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+<script>
+//헤더 스크롤시 흰배경 
+document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) {
+        header.classList.add('is-scrolled');
+    } else {
+        header.classList.remove('is-scrolled');
+    }
+    });
+});
+
+
+//이미지+텍스트 화살표 누르면 변경
+document.addEventListener('DOMContentLoaded', () => {
+    const slides = [
+    {
+        image: 'images/img_visual01.jpg',
+        text: `독도에 대한 의미를 되새기는 특별한 공간,<br>
+                독도의 삶과 역사를 잊지 않기 위해 독도체험관이 앞장서겠습니다.`
+    },
+    {
+        image: 'images/img_visual02.jpg',
+        text: `세종특별자치시교육청 독도 체험관은 독도에 대한<br>
+                올바른 이해와 영토 주권의식을 확산시키고자 마련된 공간입니다.`
+    }
+    ];
+
+    let currentIndex = 0;
+
+    const banner = document.getElementById('mainBanner');
+    const textEl = document.getElementById('bannerText');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    console.log('[DOM]', { banner, textEl, prevBtn, nextBtn });
+
+    if (!banner || !textEl || !prevBtn || !nextBtn) {
+    console.error('❌ 요소를 못 찾음: id/class 다시 확인');
+    return;
+    }
+
+    slides.forEach((s, i) => {
+    const img = new Image();
+    img.onload = () => console.log(`✅ slide ${i} image OK`, s.image);
+    img.onerror = () => console.error(`❌ slide ${i} image NOT FOUND`, s.image);
+    img.src = s.image;
+    });
+
+    function updateBanner(){
+    banner.style.backgroundImage = `url("${slides[currentIndex].image}")`;
+    textEl.innerHTML = slides[currentIndex].text;
+    console.log('✅ updateBanner index=', currentIndex);
+    }
+
+    updateBanner();
+
+    prevBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log('PREV CLICK');
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateBanner();
+    });
+
+    nextBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log('NEXT CLICK');
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateBanner();
+    });
+});
+
+// 공지사항 슬라이드
+document.addEventListener("DOMContentLoaded", () => {
+    const rail  = document.querySelector(".notice-rail");
+    const track = document.querySelector(".notice-track");
+    const btnPrev  = document.querySelector(".notice-prev");
+    const btnNext  = document.querySelector(".notice-next");
+    const btnPause = document.querySelector(".notice-pause");
+
+    if (!rail || !track || !btnPrev || !btnNext || !btnPause) return;
+
+    const cards = Array.from(track.children);
+    const realCount = cards.length;
+
+    // ✅ 원래 첫 번째 카드에만 표시용 클래스 자동 부여
+const originCards = track.querySelectorAll(".notice-card");
+if (originCards.length) {
+    originCards[0].classList.add("is-origin-first");
+}
+
+
+    if (realCount < 2) return;
+
+    const CLONE_COUNT = 2;
+    let isPaused = false;
+    let isAnimating = false;
+    let timer = null;
+
+    const getGap = () =>
+    parseFloat(getComputedStyle(track).gap) || 0;
+
+    const getStep = () => {
+    const card = track.querySelector(".notice-card");
+    if (!card) return 0;
+    return card.getBoundingClientRect().width + getGap();
+    };
+
+  /* ===== clone 생성 ===== */
+function makeClones(){
+    track.querySelectorAll(".is-clone").forEach(el => el.remove());
+
+    const origin = Array.from(track.children);
+    const head = origin.slice(0, CLONE_COUNT).map(el => el.cloneNode(true));
+    const tail = origin.slice(-CLONE_COUNT).map(el => el.cloneNode(true));
+
+    head.forEach(el => el.classList.add("is-clone"));
+    tail.forEach(el => el.classList.add("is-clone"));
+
+    head.forEach(el => track.appendChild(el));
+    tail.reverse().forEach(el => track.prepend(el));
+}
+
+    makeClones();
+
+    let index = CLONE_COUNT;
+
+function setTransition(on){
+    track.style.transition = on ? "transform .45s ease" : "none";
+}
+
+function moveTo(i, animate = true){
+    const step = getStep();
+    if (!step) return;
+    setTransition(animate);
+    index = i;
+    track.style.transform = `translateX(${-step * index}px)`;
+}
+
+moveTo(index, false);
+
+function next(){
+    if (isAnimating) return;
+    isAnimating = true;
+    moveTo(index + 1, true);
+}
+
+function prev(){
+    if (isAnimating) return;
+    isAnimating = true;
+    moveTo(index - 1, true);
+}
+
+track.addEventListener("transitionend", () => {
+    const max = realCount + CLONE_COUNT;
+    setTransition(false);
+
+    if (index < CLONE_COUNT) {
+        index += realCount;
+        moveTo(index, false);
+    }
+
+    if (index >= max) {
+        index -= realCount;
+        moveTo(index, false);
+    }
+
+    requestAnimationFrame(() => {
+        isAnimating = false;
+    });
+});
+
+  /* ===== 자동 슬라이드 ===== */
+function startAuto(){
+    stopAuto();
+    timer = setInterval(() => {
+        if (!isPaused) next();
+    }, 2800);
+}
+
+function stopAuto(){
+    if (timer) clearInterval(timer);
+}
+
+btnNext.addEventListener("click", e => {
+    e.preventDefault();
+    next();
+});
+
+btnPrev.addEventListener("click", e => {
+    e.preventDefault();
+    prev();
+});
+
+btnPause.addEventListener("click", e => {
+    e.preventDefault();
+    isPaused = !isPaused;
+    btnPause.textContent = isPaused ? "▶" : "Ⅱ";
+});
+
+rail.addEventListener("mouseenter", () => {
+    isPaused = true;
+    btnPause.textContent = "▶";
+});
+
+rail.addEventListener("mouseleave", () => {
+    isPaused = false;
+    btnPause.textContent = "Ⅱ";
+});
+
+window.addEventListener("resize", () => {
+    makeClones();
+    index = CLONE_COUNT;
+    moveTo(index, false);
+});
+
+startAuto();
+});
+
+
+// 체험존슬라이드
+document.addEventListener("DOMContentLoaded", () => {
+    const target = document.querySelector(".experience-inner"); // 원본 느낌: 캡슐만
+    if (!target) return;
+
+  // reveal-up 클래스 자동 부여
+    target.classList.add("reveal-up");
+
+const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        // 들어오면 실행
+        if (entry.isIntersecting) {
+        entry.target.classList.add("is-inview");
+        } 
+        // 나가면 다시 초기화(다시 내려올 때 재실행)
+        else {
+        entry.target.classList.remove("is-inview");
+        }
+    });
+    }, {
+    threshold: 0.1,
+    rootMargin: "0px 0px -10% 0px"
+    });
+
+    io.observe(target);
+});
+
+// 주소 커서 애니메이션
+
+document.addEventListener("DOMContentLoaded", () => {
+    const text = "“ 경상북도 울릉읍 독도리 1-96 ”";
+    const wrap  = document.querySelector(".type-wrap");
+    const caret = document.querySelector(".type-caret");
+
+    if (!wrap || !caret) return;
+
+  // 초기화
+    wrap.innerHTML = "";
+
+  // 글자 span으로 생성
+const chars = [...text].map(ch => {
+    const s = document.createElement("span");
+    s.className = "type-char";
+    s.innerHTML = ch === " " ? "&nbsp;" : ch; // ✅ 공백 유지
+    wrap.appendChild(s);
+    return s;
+});
+
+    let i = 0;          // 현재 "채워진" 길이 (0~chars.length)
+    let dir = 1;        // 1: 정방향, -1: 역방향
+    let timer = null;
+
+    const stepDelay = 90;     // 글자 이동 속도
+    const turnDelay = 650;    // 끝/처음에서 잠깐 멈춤
+
+  // i(채워진 길이)까지의 폭을 합산해서 커서 위치 이동
+function moveCaret() {
+    let x = 0;
+    for (let k = 0; k < i; k++) x += chars[k].offsetWidth;
+    caret.style.transform = `translateX(${x}px)`;
+}
+
+function tick() {
+    // 정방향: i번째를 활성화하고 i++
+    if (dir === 1) {
+    if (i < chars.length) {
+        chars[i].classList.add("is-active");
+        i++;
+        moveCaret();
+        timer = setTimeout(tick, stepDelay);
+    } else {
+        // 끝 도착 → 잠깐 멈췄다가 역방향
+        timer = setTimeout(() => {
+            dir = -1;
+            tick();
+        }, turnDelay);
+    }
+    return;
+    }
+
+    // 역방향: i-- 하고 그 글자를 비활성화
+    if (dir === -1) {
+        if (i > 0) {
+        i--;
+        chars[i].classList.remove("is-active");
+        moveCaret();
+        timer = setTimeout(tick, stepDelay);
+        } else {
+        // 시작 도착 → 잠깐 멈췄다가 정방향
+        timer = setTimeout(() => {
+            dir = 1;
+            tick();
+        }, turnDelay);
+        }
+        return;
+    }
+}
+
+  // 시작 전 살짝 딜레이
+moveCaret();
+timer = setTimeout(tick, 400);
+
+  // (옵션) 탭 전환/리사이즈 시 커서 위치 재계산
+window.addEventListener("resize", () => moveCaret());
+});
+
+</script>
+</body>
+</html>
